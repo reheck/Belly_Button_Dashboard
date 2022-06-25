@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://education.nationalgeographic.org/resource/belly-button-biodiversity">National Geographic Info</a>
+      </div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3492386/">"A Jungle in There" NCBI Article</a>
+      </div>
+    </div>
+  </nav>
+
+</head>
+
+<body>
+  <style type="text/css">
+    .jumbotron {background-image: url("https://img.freepik.com/free-photo/bacterial-culture-growth-selective-media-micro-bacteria-laboratory_38583-107.jpg?w=2000");}
+    .jumbotron h1 {font-weight: bold;}
+    
+  </style> 
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="background-info">
+          <h4>Background Information</h4>
+          <p>Volunteers were asked to swab their belly buttons and answer demographic information, belly button type (i.e., either innie "I", or outie "O"), and frequency of washing their belly button per week.
+            Once the bacterial analysis was performed on the swabs, the data was entered into a JSON object. This webpage displays the bacterial cultures results per volunteer ID. Further belly button research and information can be 
+            found in the links provided in the navigation bar at the top of the webpage. Using the drop-down menu for Test Subject ID No., volunteers can search for their individual results by selecting their provided volunteer test subject ID number.
+            The graphs will update automatically upon selection of test subject ID number. 
+          </p>
+        </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <div id="bar-paragraph">
+          <h3>Top 10 Bacterial Cultures Found</h3>
+          <p>The above horizontal bar chart displays the frequencies of the top 10 bacterial cultures collected from an individual volunteer's belly button swab sample. The OTU numbers are associated with the specific bacterial strains collected.</p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <div id="gauge-paragraph">
+          <h3>Belly Button Washing Gauge</h3>
+          <p>The above gauge displays the number of times an individual volunteer claimed to wash their belly button per week. It is interesting to see how/if the washes per week affect the bacterial culture species diversity. Further statistical analysis would need to be performed to determine if any correlation could be made.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <div id="bubble-paragraph">
+          <h3>Bacterial Cultures per Sample</h3>
+          <p>The above bubble bar chart displays the frequencies of the various bacterial cultures collected from an individual volunteer's belly button swab sample. The OTU numbers are associated with the specific bacterial strains collected. 
+            Each bubble area corresponds to the total sample value of each bacterial strain. The varied colors are intended to indicate the different OTU identification numbers. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+  
+</body>
+
+</html>
