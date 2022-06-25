@@ -1,1 +1,2 @@
 # Belly_Button_Dashboard
+### Created a dashboard with a horizontal bar chart, a bubble chart, and a gauge chart using Plotly.js for belly button bacterial data. The dashboard charts display bacterial cultures collected from a single individual volunteer's belly button. Their demographic information for the individual volunteer is displayed as well. A navigation pane was added with links to other webpages with extra background information. D3 and Bootstrap 3 were used in conjunction with JavaScript and Plotly library to create this dashboard.
