@@ -7,3 +7,7 @@
 
 ## More Info and Bubble Chart
 <img width="638" alt="image" src="https://user-images.githubusercontent.com/102757676/175790277-32367847-add4-479d-ac86-edf9c63b7606.png">
+
+## This dashboard has been deployed with GitHub pages
+https://reheck.github.io/Belly_Button_Dashboard/
+
